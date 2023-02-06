@@ -1,9 +1,15 @@
 import { Suzi } from '@/componentes/Monkey';
 import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment, useGLTF } from '@react-three/drei'
 import { Canvas } from "@react-three/fiber";
+import { useRouter } from 'next/router';
 
 export default function Monkey() {
+    const {push} = useRouter();
+
     return (
+        <>
+        <button onClick={() => push("/")}>Swiper to Home</button>
+        
         <Canvas shadows camera={{ position: [8, 1.5, 8], fov: 25 }}>
             <group position={[0, -0.5, 0]}>
                 <Center top>
@@ -28,6 +34,7 @@ export default function Monkey() {
             <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
             <Environment preset="city" />
         </Canvas>
+        </>
     )
 }
 
