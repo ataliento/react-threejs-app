@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <button onClick={() => push("/monkey")}>Swiper to Monkey</button>
+      <button onClick={() => push("/monkey")}>Redirect to Monkey</button>
 
       <Canvas>
         <ambientLight intensity={0.5} />

@@ -8,7 +8,7 @@ export default function Monkey() {
 
     return (
         <>
-        <button onClick={() => push("/")}>Swiper to Home</button>
+        <button onClick={() => push("/")}>Redirect to Home</button>
         
         <Canvas shadows camera={{ position: [8, 1.5, 8], fov: 25 }}>
             <group position={[0, -0.5, 0]}>
